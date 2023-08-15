@@ -16,7 +16,7 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
     
     });
 
-    it.only('Deve fazer cadastro de faturamento com sucesso - Usando arquivos de dados', () => {
+    it('Deve fazer cadastro de faturamento com sucesso - Usando arquivos de dados', () => {
         enderecoPage.editarEnderecoFaturamento(
             dadosEndereco[1].nome,
             dadosEndereco[1].sobrenome,
