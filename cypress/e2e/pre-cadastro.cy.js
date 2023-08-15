@@ -23,6 +23,13 @@ var faker = require('faker');
             
             cy.get('.woocommerce-message').should('contain' , 'Detalhes da conta modificados com sucesso.')
         })
-
+           
+        it.only('Deve completar o pré-cadastro com sucesso usando Comandos customizados', () =>{
+            let emailFaker2 = faker.internet.email()
+            cy.preCadastro(emailFaker2, 'senha@#forte', 'Felipe', 'Magalhães')
+            cy.get('.woocommerce-message').should('contain' , 'Detalhes da conta modificados com sucesso.')
+            
+        })
+            
 
     });
